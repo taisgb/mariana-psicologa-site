@@ -35,7 +35,6 @@ O site foi desenvolvido com o objetivo de ser uma plataforma intuitiva e acolhed
 * Página dedicada ao podcast (sem nome definido, mas focado em relacionamentos).
 * Frase convidativa: "Vem ouvir a gente desatando nós dos relacionamentos?".
 * Player de podcast incorporado do Spotify, exibindo uma lista de episódios para atualização automática.
-* Apresentação dos temas abordados (Autoconhecimento, Comunicação, Autoestima, Dependência Emocional).
 
 ### Contato (`pages/contato.html`)
 * Formas de conexão direta com a Mariana.
