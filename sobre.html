@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariana Virgínio - Psicóloga</title>
+    <meta name="description" content="Psicóloga Mariana Virgínio - Atendimento psicológico com leveza, confiança, conforto e profissionalismo.">
+    
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-bg': '#cbd8ad',
+                        'primary-accent': '#74bf92',
+                        'primary-button': '#038158',
+                        'primary-text': '#405864'
+                    },
+                    fontFamily: {
+                        'title': ['Playfair Display', 'serif'],
+                        'body': ['Josefin Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="./css/style.css">    
+    
+</head>
+<body class="font-body text-primary-text bg-primary-bg"> 
+    
+
+<header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-lg z-50">
+        <nav class="container mx-auto">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <img src="./assets/img/logo/logo1.png" alt="Logo Mariana Virgínio" class="h-24">
+                </div>
+                <ul class="hidden md:flex space-x-7">
+                    <li><a href="./index.html" class="hover:text-primary-button transition-colors duration-300 font-medium">Início</a></li>
+                    <li><a href="./sobre.html" class="hover:text-primary-button transition-colors duration-300 font-medium">Sobre</a></li>
+                    <li><a href="./produtos.html" class="hover:text-primary-button transition-colors duration-300 font-medium">Produtos</a></li>
+                    <li><a href="./podcast.html" class="hover:text-primary-button transition-colors duration-300 font-medium">Podcast</a></li>
+                    <li><a href="./contato.html" class="hover:text-primary-button transition-colors duration-300 font-medium">Contato</a></li>
+                </ul>
+                <button id="mobile-menu-btn" type="button" class="md:hidden flex flex-col space-y-1 p-2" aria-label="Abrir menu" title="Abrir menu">
+                    <span class="w-6 h-0.5 bg-primary-text transition-all duration-300"></span>
+                    <span class="w-6 h-0.5 bg-primary-text transition-all duration-300"></span>
+                    <span class="w-6 h-0.5 bg-primary-text transition-all duration-300"></span>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="menu-mobile hidden fixed top-0 left-0 w-full h-screen bg-white z-40 md:hidden">
+            <div class="absolute top-5 right-5">
+                <button id="close-menu-btn" aria-label="Fechar menu" title="Fechar menu" class="text-3xl font-bold text-primary-text hover:text-primary-button">&times;</button>
+            </div>
+            <div class="flex flex-col items-center justify-center h-full space-y-8">
+                <a href="./index.html" class="text-2xl font-medium text-primary-text hover:text-primary-button transition-colors duration-300">Início</a>
+                <a href="./sobre.html" class="text-2xl font-medium text-primary-text hover:text-primary-button transition-colors duration-300">Sobre</a>
+                <a href="./produtos.html" class="text-2xl font-medium text-primary-text hover:text-primary-button transition-colors duration-300">Produtos</a>
+                <a href="./podcast.html" class="text-2xl font-medium text-primary-text hover:text-primary-button transition-colors duration-300">Podcast</a>
+                <a href="./contato.html" class="text-2xl font-medium text-primary-text hover:text-primary-button transition-colors duration-300">Contato</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        
+        <section class="py-20">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16 fade-in">
+                    <h1 class="font-title text-4xl md:text-5xl font-bold text-primary-text mb-6">
+                        Sobre Mim
+                    </h1>
+                    <p class="text-lg text-primary-text/80 max-w-2xl mx-auto">
+                        Conheça minha trajetória, formação e abordagem terapêutica
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="fade-in flex justify-center">
+                        <div class="relative">
+                            <div class="w-80 h-96 rounded-2xl overflow-hidden shadow-2xl">
+                                <img src="../assets/img/IMG_9453.JPG" alt="Mariana Virgínio" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="fade-in">
+                        <h2 class="font-title text-3xl font-bold text-primary-text mb-6">
+                            Mariana Virgínio
+                        </h2>
+                        <p class="text-lg text-justify text-primary-text/80 mb-6 leading-relaxed">
+                           Olá! Sou a Mariana, mas pode me chamar de Mari. Sou psicóloga clínica, e antes de falar sobre minha trajetória profissional, quero compartilhar um pouco sobre quem sou. Afinal, nossas experiências moldam quem nos tornamos.
+                        </p>
+                        <p class="text-lg text-justify text-primary-text/80 mb-6 leading-relaxed">
+                            Sou casada com o João, a caçula de três irmãos, e uma torcedora apaixonada do LAION. Minha dose de solitude? Assistir séries em uma quinta-feira tranquila. Amo a rotina, mas celebro a diversidade e flexibilidade que a vida me oferece. Sou fascinada por observar, refletir e nutrir relacionamentos. Cresci com contos de fadas e comédias românticas, e justamente por isso, adoro desafiar os padrões que eles impõem. A leitura é meu refúgio em qualquer lugar – muitas vezes, com dois livros ao mesmo tempo, um físico e um digital. E sim, a vida fitness conquistou meu coração! Viajar está no topo da minha lista de paixões. E isso é só o começo da minha história!
+                        </p>
+                        <p class="text-lg text-primary-text/80 leading-relaxed">
+                           Mariana da Silva Virgínio - CRP 11/11809
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="font-title text-3xl md:text-4xl font-bold text-center text-primary-text mb-16">
+                    Formação & Experiência
+                </h2>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-primary-bg/30 p-8 rounded-2xl hover-scale">
+                        <h3 class="font-title text-2xl font-bold text-primary-text mb-6">Formação Acadêmica</h3>
+                        <div class="space-y-4">
+                            <div class="border-l-4 border-primary-accent pl-4">
+                                <h4 class="font-semibold text-primary-text">Graduação em Psicologia</h4>
+                                <p class="text-primary-text/70">Universidade Federal do Ceará (UFC)</p>
+                            </div>
+                            <div class="border-l-4 border-primary-accent pl-4">
+                                <h4 class="font-semibold text-primary-text">Especialização em Terapia Analítico-Comportamental</h4>
+                                <p class="text-primary-text/70">Núcleo Tríplice de Análise do Comportamento</p>
+                            </div>
+                            <div class="border-l-4 border-primary-accent pl-4">
+                                <h4 class="font-semibold text-primary-text">Formação em Terapia de Aceitação e Compromisso (ACT)</h4>
+                                <p class="text-primary-text/70">Instituto Paradigma (Ciência do comportamento)</p>
+                            </div>
+                            <div class="border-l-4 border-primary-accent pl-4">
+                                <h4 class="font-semibold text-primary-text">Formação em Terapia de Casal</h4>
+                                <p class="text-primary-text/70">Atitude Cursos</p>
+                            </div>
+                            <div class="border-l-4 border-primary-accent pl-4">
+                                <h4 class="font-semibold text-primary-text">Pós-graduação em Psicoterapia Analítico-Funcional (FAP)</h4>
+                                <p class="text-primary-text/70">Centro Brasileiro de Ciência Comportamental Contextual (CECONTE)</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-primary-bg/30 p-8 rounded-2xl hover-scale">
+                        <h3 class="font-title text-2xl font-bold text-primary-text mb-6">Experiência Profissional</h3>
+                        <div class="space-y-4">
+                            <div class="border-l-4 border-primary-button pl-4">
+                                <h4 class="font-semibold text-primary-text">Co-fundadora do Espaço VESTA®</h4>
+                                <p class="text-primary-text/70">Clínica interdisciplinar de saúde voltada para atendimento familiar</p>
+                            </div>
+                            <div class="border-l-4 border-primary-button pl-4">
+                                <h4 class="font-semibold text-primary-text">Co-fundadora da Trato – Soluções Comportamentais®</h4>
+                                <p class="text-primary-text/70">Clínica de psicologia com profissionais Analistas do Comportamento</p>
+                            </div>
+                            <div class="border-l-4 border-primary-button pl-4">
+                                <h4 class="font-semibold text-primary-text">Atendimento Psicoterápico</h4>
+                                <p class="text-primary-text/70">Foco em relacionamentos, clareza de valores e desafios da mulher contemporânea</p>
+                            </div>
+                            <div class="border-l-4 border-primary-button pl-4">
+                                <h4 class="font-semibold text-primary-text">Público de Atendimento</h4>
+                                <p class="text-primary-text/70">Casais e Adultos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="py-20">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="font-title text-3xl md:text-4xl font-bold text-primary-text mb-6">
+                        Minha Abordagem
+                    </h2>
+                    <p class="text-lg text-primary-text/80 max-w-3xl mx-auto">
+                        Minha atuação é embasada na Análise do Comportamento, utilizando modelos terapêuticos de base comportamental.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center p-6 bg-white rounded-2xl shadow-lg hover-scale">
+                        <div class="w-16 h-16 bg-primary-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-title text-xl font-semibold text-primary-text mb-3">Análise do Comportamento</h3>
+                        <p class="text-primary-text/70">A linha teórica que fundamenta minha prática clínica, focando na compreensão das relações entre o ambiente e o comportamento.</p>
+                    </div>
+                    
+                    <div class="text-center p-6 bg-white rounded-2xl shadow-lg hover-scale">
+                        <div class="w-16 h-16 bg-primary-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-title text-xl font-semibold text-primary-text mb-3">Terapia de Aceitação e Compromisso (ACT)</h3>
+                        <p class="text-primary-text/70">Uma abordagem contextual que busca flexibilidade psicológica, aceitação e ações baseadas em valores.</p>
+                    </div>
+                    
+                    <div class="text-center p-6 bg-white rounded-2xl shadow-lg hover-scale">
+                        <div class="w-16 h-16 bg-primary-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-title text-xl font-semibold text-primary-text mb-3">Terapia Analítica Funcional (FAP)</h3>
+                        <p class="text-primary-text/70">Uma terapia contextual focada em usar a relação terapêutica para desenvolver novas habilidades comportamentais.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+    <footer class="bg-primary-text text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <div class="flex items-center justify-center space-x-2 mb-4">                   
+                        <img src="../assets/img/logo/logo-Mari-05.png" alt="Logo Mariana Virgínio" class="h-24">
+                </div>
+                
+                <p class="text-white/80 mb-4">
+                    © 2024 Mariana Virgínio. Todos os direitos reservados.
+                </p>
+                
+                <p class="text-white/60 text-sm">
+                    Desenvolvido por <a href="https://taisgb.com.br" rel="noopener"  target="_blank" class="text-primary-accent hover:text-primary-accent/80 transition-colors duration-300">taisgb.com.br</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../main.js"></script>
+    
+</body>
+</html>

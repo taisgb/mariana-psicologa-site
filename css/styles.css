@@ -1,0 +1,63 @@
+/* ===== Animações Personalizadas ===== */
+.fade-in {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hover-scale {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Menu Mobile ===== */
+.menu-mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  z-index: 40;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-mobile.active {
+  transform: translateX(0);
+}
+
+/* ===== Scroll Suave ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- Desabilitar fade-in para telas pequenas --- */
+@media (max-width: 767px) {
+  .fade-in {
+    opacity: 1 !important; 
+    transform: translateY(0) !important; 
+    animation: none !important;
+    transition: none !important;
+}
+}
+
+.spotify-embed-player {
+    border-radius: 12px;
+}
