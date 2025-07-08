@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (event.key === "Escape" && mobileMenu.classList.contains("active")) {
       closeMobileMenu();
     }
-  }); // Fechar o eventListener do keydown aqui
+  });
 
   // Animações de Scroll
   function isElementInViewport(el) {
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const fadeElements = document.querySelectorAll(".fade-in")
   fadeElements.forEach((element) => {
-    //  Aplica animação apenas em telas maiores que 767px
+    // Aplica animação apenas em telas maiores que 767px
     if (window.innerWidth > 767) {
       element.style.opacity = "0"
       element.style.transform = "translateY(20px)"
@@ -100,82 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", handleScrollAnimations)
   handleScrollAnimations() // Chama a função na carga inicial para elementos visíveis no início
 
-  // Formulário de Contato
-  const contactForm = document.querySelector("form")
-  if (contactForm) {
-    contactForm.addEventListener("submit", (event) => {
-      event.preventDefault()
-
-      const nome = document.getElementById("nome")?.value.trim()
-      const email = document.getElementById("email")?.value.trim()
-      const telefone = document.getElementById("telefone")?.value.trim()
-      const assunto = document.getElementById("assunto")?.value
-      const mensagem = document.getElementById("mensagem")?.value.trim()
-
-      let isValid = true
-      let errorMessage = ""
-
-      if (!nome) {
-        errorMessage += "Nome é obrigatório.\n"
-        isValid = false
-      }
-      if (!email) {
-        errorMessage += "E-mail é obrigatório.\n"
-        isValid = false
-      } else if (!isValidEmail(email)) {
-        errorMessage += "E-mail inválido.\n"
-        isValid = false
-      }
-      if (!telefone) {
-        errorMessage += "Telefone é obrigatório.\n"
-        isValid = false
-      }
-      if (!assunto) {
-        errorMessage += "Assunto é obrigatório.\n"
-        isValid = false
-      }
-      if (!mensagem) {
-        errorMessage += "Mensagem é obrigatória.\n"
-        isValid = false
-      }
-
-      if (!isValid) {
-        alert("Por favor, corrija os seguintes erros:\n\n" + errorMessage)
-        return
-      }
-
-      const submitButton = contactForm.querySelector('button[type="submit"]')
-      const originalText = submitButton.textContent
-      submitButton.textContent = "Enviando..."
-      submitButton.disabled = true
-
-      setTimeout(() => {
-        alert("Mensagem enviada com sucesso!")
-        contactForm.reset()
-        submitButton.textContent = originalText
-        submitButton.disabled = false
-      }, 2000)
-    })
-  }
-
-  function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    return emailRegex.test(email)
-  }
-
-  const telefoneInput = document.getElementById("telefone")
-  if (telefoneInput) {
-    telefoneInput.addEventListener("input", (event) => {
-      let value = event.target.value.replace(/\D/g, "")
-      if (value.length <= 10) {
-        value = value.replace(/(\d{2})(\d{4})(\d{4})/, "($1) $2-$3")
-      } else {
-        value = value.replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3")
-      }
-      event.target.value = value
-    })
-  }
-
+  
   const anchorLinks = document.querySelectorAll('a[href^="#"]')
   anchorLinks.forEach((link) => {
     link.addEventListener("click", function (event) {
@@ -232,9 +157,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     Obrigada por visitar! 💚
   `)
-});
+}); 
 
-// Funções utilitárias globais (agora fora do DOMContentLoaded)
+// Funções utilitárias globais
 function debounce(func, wait, immediate) {
   let timeout
   return function executedFunction() {
@@ -267,4 +192,4 @@ window.MarianaVirginio = {
   scrollToElement,
   isMobileDevice,
   debounce,
-}
+}; 
