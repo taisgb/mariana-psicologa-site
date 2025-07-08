@@ -31,58 +31,14 @@
         }
     </script>
 
-    <link rel="stylesheet" href="./css/style.css">    
+    <link rel="stylesheet" href="./css/style.css">   
     
-    <!-- <script>
-        // ESTE É UM ESBOÇO DE COMO VOCÊ CARREGARIA O FEED DO INSTAGRAM VIA JS
-        // ISTO VAI REQUERER MUITO MAIS CONFIGURAÇÃO E CÓDIGO JS REAL DA API DO INSTAGRAM
-        // NÃO É UM SCRIPT PRONTO PARA USO IMEDIATO SEM A CONFIGURAÇÃO DA API
-        document.addEventListener('DOMContentLoaded', () => {
-            const instagramFeedContainer = document.getElementById('instagram-feed');
-            if (instagramFeedContainer) {
-                // Exemplo de como seria a chamada da API (PSEUDOCÓDIGO)
-                // fetch('https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink&access_token=SEU_ACCESS_TOKEN')
-                //     .then(response => response.json())
-                //     .then(data => {
-                //         data.data.forEach(post => {
-                //             if (post.media_type === 'IMAGE' || post.media_type === 'CAROUSEL_ALBUM') {
-                //                 const postElement = document.createElement('a');
-                //                 postElement.href = post.permalink;
-                //                 postElement.target = '_blank';
-                //                 postElement.rel = 'noopener noreferrer';
-                //                 postElement.classList.add('block', 'relative', 'overflow-hidden', 'rounded-lg', 'aspect-square', 'group'); // Tailwind classes
-                //                 postElement.innerHTML = `
-                //                     <img src="${post.media_url}" alt="${post.caption || 'Instagram post'}" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
-                //                     <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                //                         <p class="text-white text-xs p-2 text-center">${post.caption ? post.caption.substring(0, 50) + '...' : ''}</p>
-                //                     </div>
-                //                 `;
-                //                 instagramFeedContainer.appendChild(postElement);
-                //             }
-                //         });
-                //     })
-                //     .catch(error => {
-                //         console.error('Erro ao carregar feed do Instagram:', error);
-                //         instagramFeedContainer.innerHTML = '<p class="text-primary-text/70 text-center">Não foi possível carregar as postagens do Instagram. Verifique a configuração da API.</p>';
-                //     });
+    
+</head>  
 
-                // Mensagem para indicar que a API precisa ser configurada
-                instagramFeedContainer.innerHTML = `
-                    <div class="p-8 text-center bg-primary-bg/30 rounded-lg">
-                        <p class="text-primary-text font-semibold mb-4">Para exibir as últimas postagens do Instagram aqui, é necessário configurar a API do Instagram Graph.</p>
-                        <p class="text-primary-text/70">Visite a documentação do Meta for Developers para mais informações sobre como integrar feeds.</p>
-                        <a href="https://developers.facebook.com/docs/instagram/overview" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block bg-primary-accent text-white px-6 py-3 rounded-full hover:bg-primary-accent/90 transition-colors duration-300">
-                            Guia da API do Instagram
-                        </a>
-                    </div>
-                `;
-            }
-        });
-    </script> -->
-</head>
-<body class="font-body text-primary-text bg-primary-bg"> 
-    
-<header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-lg z-50">
+
+<body class="font-body text-primary-text bg-primary-bg">
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-lg z-50">
         <nav class="container mx-auto">
             <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-2">
@@ -114,9 +70,7 @@
                 <a href="./contato.html" class="text-2xl font-medium text-primary-text hover:text-primary-button transition-colors duration-300">Contato</a>
             </div>
         </div>
-</header>
-
-<body class="font-body text-primary-text bg-primary-bg">
+    </header>
     
     <main class="pt-20">
         
