@@ -47,13 +47,14 @@ O site foi desenvolvido com o objetivo de ser uma plataforma intuitiva e acolhed
 
 Para rodar o projeto em seu ambiente local, siga estas instruções:
 
-1.  **Clone o repositório** (se estiver usando Git):
+1.  **Clone o repositório:**
     ```bash
-    git clone [URL_DO_SEU_REPOSITORIO]
-    cd [nome-do-repositorio]
+    git clone [https://github.com/taisgb/mariana-psicologa-site.git](https://github.com/taisgb/mariana-psicologa-site.git)
+    cd mariana-psicologa-site
     ```
 2.  **Abra os arquivos no navegador:**
-    Simplesmente abra o arquivo `index.html` em seu navegador de preferência. Para uma melhor experiência de desenvolvimento (especialmente com caminhos de arquivos), é recomendado usar uma extensão como "Live Server" no VS Code ou similar, que cria um servidor local.
+    Simplesmente abra o arquivo `index.html` em seu navegador de preferência. Para uma melhor experiência de desenvolvimento, é recomendado usar uma extensão como "Live Server" no VS Code ou similar, que cria um servidor local.
+
 
 ## 🎨 Customização
 
