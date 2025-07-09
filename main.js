@@ -100,54 +100,146 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", handleScrollAnimations)
   handleScrollAnimations() // Chama a função na carga inicial para elementos visíveis no início
 
-  
-  const anchorLinks = document.querySelectorAll('a[href^="#"]')
-  anchorLinks.forEach((link) => {
-    link.addEventListener("click", function (event) {
-      const href = this.getAttribute("href")
-      if (href !== "#" && href.length > 1) {
-        const targetElement = document.querySelector(href)
-        if (targetElement) {
-          event.preventDefault()
-          const headerHeight = document.querySelector("header").offsetHeight
-          const targetPosition = targetElement.offsetTop - headerHeight - 20
-          window.scrollTo({ top: targetPosition, behavior: "smooth" })
-        }
-      }
-    })
-  })
+  // --- Início das funções relacionadas ao Formulário de Contato (via WhatsApp) ---
+  const contactForm = document.getElementById("contact-form"); // Usa o ID do formulário
+  if (contactForm) {
+      contactForm.addEventListener("submit", async (event) => { // Mantém 'async'
+          event.preventDefault(); // Previne o envio padrão do formulário
 
-  const header = document.querySelector("header")
+          const nome = document.getElementById("nome")?.value.trim();
+          const email = document.getElementById("email")?.value.trim();
+          const telefone = document.getElementById("telefone")?.value.trim();
+          const mensagem = document.getElementById("mensagem")?.value.trim();
+
+          let isValid = true;
+          let errorMessage = "";
+
+          // Validações dos campos
+          if (!nome) {
+              errorMessage += "Nome é obrigatório.\n";
+              isValid = false;
+          }
+          if (!email) {
+              errorMessage += "E-mail é obrigatório.\n";
+              isValid = false;
+          } else if (!isValidEmail(email)) {
+              errorMessage += "E-mail inválido.\n";
+              isValid = false;
+          }
+          if (!telefone) {
+              errorMessage += "Telefone é obrigatório.\n";
+              isValid = false;
+          }
+          if (!mensagem) {
+              errorMessage += "Mensagem é obrigatória.\n";
+              isValid = false;
+          }
+
+          const submitButton = contactForm.querySelector('button[type="submit"]');
+          const originalText = submitButton.textContent;
+
+          if (!isValid) {
+              alert("Por favor, corrija os seguintes erros:\n\n" + errorMessage);
+              return;
+          }
+
+          // Se a validação passar, prepare e abra o link do WhatsApp
+          submitButton.textContent = "Abrindo WhatsApp...";
+          submitButton.disabled = true;
+
+         
+         const numeroWhatsapp = "558597319399";  // Número de telefone da Mari
+          const mensagemPadrao = `Olá, Mari! Meu nome é ${nome}. Meu e-mail é ${email} e meu telefone é ${telefone}. Minha mensagem é: ${mensagem}`;
+          const mensagemCodificada = encodeURIComponent(mensagemPadrao); // Codifica a mensagem para URL
+
+          const linkWhatsapp = `https://wa.me/${numeroWhatsapp}?text=${mensagemCodificada}`;
+
+          // Abre o WhatsApp em uma nova aba
+          window.open(linkWhatsapp, '_blank');
+
+          // Resetar o formulário e o botão após a tentativa de abertura
+          contactForm.reset();
+          submitButton.textContent = originalText;
+          submitButton.disabled = false;
+          alert("O WhatsApp será aberto com sua mensagem pré-preenchida. Por favor, clique em 'Enviar' no aplicativo para finalizar.");
+      });
+  }
+
+  // Função de validação de e-mail
+  function isValidEmail(email) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+  }
+
+  // Formatação do telefone
+  const telefoneInput = document.getElementById("telefone");
+  if (telefoneInput) {
+      telefoneInput.addEventListener("input", (event) => {
+          let value = event.target.value.replace(/\D/g, "");
+          if (value.length <= 10) {
+              value = value.replace(/(\d{2})(\d{4})(\d{4})/, "($1) $2-$3");
+          } else {
+              value = value.replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3");
+          }
+          event.target.value = value;
+      });
+  }
+  // --- Fim das funções relacionadas ao Formulário de Contato ---
+
+
+  // --- Início: Ajuste para Links Âncora na Mesma Página ---
+  const anchorLinks = document.querySelectorAll('a[href^="#"]');
+  anchorLinks.forEach((link) => {
+      link.addEventListener("click", function (event) {
+          const href = this.getAttribute("href");
+          if (href !== "#" && href.length > 1) {
+              const targetElement = document.querySelector(href);
+              if (targetElement) {
+                  event.preventDefault();
+                  const headerHeight = document.querySelector("header").offsetHeight;
+                  const targetPosition = targetElement.offsetTop - headerHeight - 20;
+                  window.scrollTo({ top: targetPosition, behavior: "smooth" });
+                  
+                  if (mobileMenu && mobileMenu.classList.contains("active")) {
+                      closeMobileMenu();
+                  }
+              }
+          }
+      });
+  });
+  // --- Fim: Ajuste para Links Âncora ---
+
+  const header = document.querySelector("header");
   window.addEventListener("scroll", () => {
     if (window.scrollY > 100) {
-      header.style.backgroundColor = "rgba(255, 255, 255, 0.98)"
+      header.style.backgroundColor = "rgba(255, 255, 255, 0.98)";
     } else {
-      header.style.backgroundColor = "rgba(255, 255, 255, 0.95)"
+      header.style.backgroundColor = "rgba(255, 255, 255, 0.95)";
     }
-  })
+  });
 
-  const ctaButtons = document.querySelectorAll(".hover-scale")
+  const ctaButtons = document.querySelectorAll(".hover-scale");
   ctaButtons.forEach((button) => {
     button.addEventListener("mouseenter", function () {
-      this.style.transform = "translateY(-5px) scale(1.02)"
-    })
+      this.style.transform = "translateY(-5px) scale(1.02)";
+    });
     button.addEventListener("mouseleave", function () {
-      this.style.transform = "translateY(0) scale(1)"
-    })
-  })
+      this.style.transform = "translateY(0) scale(1)";
+    });
+  });
 
-  const images = document.querySelectorAll("img[data-src]")
+  const images = document.querySelectorAll("img[data-src]");
   const imageObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        const img = entry.target
-        img.src = img.dataset.src
-        img.classList.remove("lazy")
-        imageObserver.unobserve(img)
+        const img = entry.target;
+        img.src = img.dataset.src;
+        img.classList.remove("lazy");
+        imageObserver.unobserve(img);
       }
-    })
-  })
-  images.forEach((img) => imageObserver.observe(img))
+    });
+  });
+  images.forEach((img) => imageObserver.observe(img));
 
   console.log(`
     🌟 Site desenvolvido para Mariana Virgínio - Psicóloga
@@ -156,35 +248,35 @@ document.addEventListener("DOMContentLoaded", () => {
     ⚡ Tecnologias: HTML5, Tailwind CSS, JavaScript Vanilla
 
     Obrigada por visitar! 💚
-  `)
+  `);
 }); 
 
-// Funções utilitárias globais
+// Funções utilitárias globais (fora do DOMContentLoaded)
 function debounce(func, wait, immediate) {
-  let timeout
+  let timeout;
   return function executedFunction() {
-    const args = arguments
+    const args = arguments;
     const later = () => {
-      timeout = null
-      if (!immediate) func.apply(this, args)
-    }
-    const callNow = immediate && !timeout
-    clearTimeout(timeout)
-    timeout = setTimeout(later, wait)
-    if (callNow) func.apply(this, args)
-  }
+      timeout = null;
+      if (!immediate) func.apply(this, args);
+    };
+    const callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(this, args);
+  };
 }
 
 function isMobileDevice() {
-  return typeof window.orientation !== "undefined" || navigator.userAgent.indexOf("IEMobile") !== -1
+  return typeof window.orientation !== "undefined" || navigator.userAgent.indexOf("IEMobile") !== -1;
 }
 
 function scrollToElement(elementId, offset = 0) {
-  const element = document.getElementById(elementId)
+  const element = document.getElementById(elementId);
   if (element) {
-    const headerHeight = document.querySelector("header").offsetHeight
-    const targetPosition = element.offsetTop - headerHeight - offset
-    window.scrollTo({ top: targetPosition, behavior: "smooth" })
+    const headerHeight = document.querySelector("header").offsetHeight;
+    const targetPosition = element.offsetTop - headerHeight - offset;
+    window.scrollTo({ top: targetPosition, behavior: "smooth" });
   }
 }
 
@@ -192,4 +284,4 @@ window.MarianaVirginio = {
   scrollToElement,
   isMobileDevice,
   debounce,
-}; 
+};

@@ -3,19 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mariana Virgínio - Psicóloga</title>
-    <meta name="description" content="Psicóloga Mariana Virgínio - Atendimento psicológico com leveza, confiança, conforto e profissionalismo.">
+    <title>Mariana Virgínio - Psicóloga | Produtos para Casais e Bem-Estar</title>
+    <meta name="description" content="Psicóloga Mariana Virgínio: Produtos exclusivos para casais para nutrir a relação, podcast sobre bem-estar e agendamento de consultas. Transforme sua história.">
     
-    
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Tailwind Config -->
     <script>
         tailwind.config = {
             theme: {
@@ -35,13 +31,11 @@
         }
     </script>
 
-    <!--CSS Global-->
-    <link rel="stylesheet" href="./css/style.css">    
+    <link rel="stylesheet" href="./css/styles.css">    
     
 </head>
 <body class="font-body text-primary-text bg-primary-bg"> 
     
-
 <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-lg z-50">
         <nav class="container mx-auto">
             <div class="flex items-center justify-between">
@@ -50,10 +44,9 @@
                 </div>
                 <ul class="hidden md:flex space-x-7">
                     <li><a href="#inicio" class="hover:text-primary-button transition-colors duration-300 font-medium">Início</a></li>
-                    <li><a href="./sobre.html" class="hover:text-primary-button transition-colors duration-300 font-medium">Sobre</a></li>
-                    <li><a href="./produtos.html" class="hover:text-primary-button transition-colors duration-300 font-medium">Produtos</a></li>
-                    <li><a href="./podcast.html" class="hover:text-primary-button transition-colors duration-300 font-medium">Podcast</a></li>
-                    <li><a href="./contato.html" class="hover:text-primary-button transition-colors duration-300 font-medium">Contato</a></li>
+                    <li><a href="#produtos" class="hover:text-primary-button transition-colors duration-300 font-medium">Produtos</a></li>
+                    <li><a href="#podcast" class="hover:text-primary-button transition-colors duration-300 font-medium">Podcast</a></li>
+                    <li><a href="#contato" class="hover:text-primary-button transition-colors duration-300 font-medium">Contato</a></li>
                 </ul>
                 <button id="mobile-menu-btn" type="button" class="md:hidden flex flex-col space-y-1 p-2" aria-label="Abrir menu" title="Abrir menu">
                     <span class="w-6 h-0.5 bg-primary-text transition-all duration-300"></span>
@@ -62,158 +55,266 @@
                 </button>
             </div>
         </nav>
-        <div id="mobile-menu" class="menu-mobile fixed top-0 left-0 w-full h-screen bg-white z-40 md:hidden">
+        <div id="mobile-menu" class="menu-mobile hidden fixed top-0 left-0 w-full h-screen bg-white z-40 md:hidden">
             <div class="absolute top-5 right-5">
-                <button id="close-menu-btn" aria-label="Fechar menu" title="Fechar menu" class="text-3xl font-bold text-primary-text hover:text-primary-button">&times;</button>
+                <button id="close-menu-btn" aria-label="Fechar menu" title="Fechar menu">×</button>
             </div>
             <div class="flex flex-col items-center justify-center h-full space-y-8">
-                <a href="./index.html" class="text-2xl font-medium text-primary-text hover:text-primary-button transition-colors duration-300">Início</a>
-                <a href="./sobre.html" class="text-2xl font-medium text-primary-text hover:text-primary-button transition-colors duration-300">Sobre</a>
-                <a href="./produtos.html" class="text-2xl font-medium text-primary-text hover:text-primary-button transition-colors duration-300">Produtos</a>
-                <a href="./podcast.html" class="text-2xl font-medium text-primary-text hover:text-primary-button transition-colors duration-300">Podcast</a>
-                <a href="./contato.html" class="text-2xl font-medium text-primary-text hover:text-primary-button transition-colors duration-300">Contato</a>
+                <a href="#inicio" class="text-2xl font-medium text-primary-text hover:text-primary-button transition-colors duration-300">Início</a>
+                <a href="#produtos" class="text-2xl font-medium text-primary-text hover:text-primary-button transition-colors duration-300">Produtos</a>
+                <a href="#podcast" class="text-2xl font-medium text-primary-text hover:text-primary-button transition-colors duration-300">Podcast</a>
+                <a href="#contato" class="text-2xl font-medium text-primary-text hover:text-primary-button transition-colors duration-300">Contato</a>
             </div>
         </div>
-    </header>
+</header>
+
+<a href="https://wa.me/558597319399" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform duration-300 z-50" title="Fale com a Mari pelo WhatsApp">
+    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"></path>
+    </svg>
+</a>
 
 
-    <!-- Main Content -->
-    <main class="pt-36 md:pt-24">        
-        <!-- Seção Hero -->
-        <section id="inicio" class="min-h-screen flex items-center py-">
-            <div class="container mx-auto px-4">
-                <div class="grid md:grid-cols-2 gap-10 items-center">
-                    <!-- Texto Hero -->
-                    <div class="fade-in">
-                        <h1 class="font-title text-4xl md:text-6xl font-bold text-primary-text mb-6">
-                            Cuidando da sua 
-                            <span class="text-primary-button">história</span> 
-                            com presença e intenção
-                        </h1>
-                        <p class="text-lg text-justify md:text-xl text-primary-text/80 mb-8 leading-relaxed">
-                              Oi, eu sou a Mari. Psicóloga clínica apaixonada por compreender, cuidar e transformar relações — inclusive a sua com você. Atendo casais e adultos que desejam viver com mais verdade, leveza e conexão. Tudo isso com escuta, ciência e afeto.
-                        </p>
-                        <a href="./produtos.html" class="bg-primary-button text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-primary-button/90 transition-all duration-300 hover-scale">
+<main class="pt-36 md:pt-24">        
+    <section id="inicio" class="min-h-screen flex items-center py-">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <div class="fade-in">
+                    <h1 class="font-title text-4xl md:text-6xl font-bold text-primary-text mb-6">
+                        Cuidando da sua 
+                        <span class="text-primary-button">história</span> 
+                        com presença e intenção
+                    </h1>
+                    <p class="text-lg text-justify md:text-xl text-primary-text/80 mb-8 leading-relaxed">
+                          Oi, eu sou a Mari. Psicóloga clínica apaixonada por compreender, cuidar e transformar relações — inclusive a sua com você. Atendo casais e adultos que desejam viver com mais verdade, leveza e conexão. Tudo isso com escuta, ciência e afeto.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#produtos" class="bg-primary-button text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-primary-button/90 transition-all duration-300 hover-scale">
                             Conheça meus produtos
                         </a>
+                        <a href="#contato" class="bg-transparent border-2 border-primary-button text-primary-button px-8 py-4 rounded-full font-semibold text-lg hover:bg-primary-button hover:text-white transition-all duration-300 hover-scale">
+                            Agendar Consulta
+                        </a>
                     </div>
-                    
-                    <!-- Foto da Mariana  height=320&width=320 -->
-                    <div class="fade-in flex justify-center">
-                        <div class="relative">
-                            <div class="w-80 h-100 rounded-full overflow-hidden shadow-2xl">
-                                <img src="./assets/img/IMG_9323.JPG" alt="Mariana Virgínio - Psicóloga" class="w-full h-full object-cover">
-                            </div>
-                            <!-- Decoração -->
-                            <div class="absolute -top-4 -right-4 w-20 h-20 bg-primary-accent/30 rounded-full"></div>
-                            <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-primary-button/20 rounded-full"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Seção Valores -->
-        <section class="py-20 bg-white">
-            <div class="container mx-auto px-4">
-                <h2 class="font-title text-3xl md:text-4xl font-bold text-center text-primary-text mb-16">
-                    Meus Valores
-                </h2>
-                
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Leveza -->
-                    <div class="text-center p-6 rounded-2xl bg-primary-bg/30 hover-scale">
-                        <div class="w-16 h-16 bg-primary-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="font-title text-xl font-semibold text-primary-text mb-2">Leveza</h3>
-                        <p class="text-primary-text/70">Abordagem leve e natural para tornar o processo terapêutico mais acessível.</p>
-                    </div>
-                    
-                    <!-- Confiança -->
-                    <div class="text-center p-6 rounded-2xl bg-primary-bg/30 hover-scale">
-                        <div class="w-16 h-16 bg-primary-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="font-title text-xl font-semibold text-primary-text mb-2">Confiança</h3>
-                        <p class="text-primary-text/70">Construindo uma relação de confiança mútua e respeito em cada sessão.</p>
-                    </div>
-                    
-                    <!-- Conforto -->
-                    <div class="text-center p-6 rounded-2xl bg-primary-bg/30 hover-scale">
-                        <div class="w-16 h-16 bg-primary-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="font-title text-xl font-semibold text-primary-text mb-2">Conforto</h3>
-                        <p class="text-primary-text/70">Ambiente acolhedor e seguro onde você pode se expressar livremente.</p>
-                    </div>
-                    
-                    <!-- Profissionalismo -->
-                    <div class="text-center p-6 rounded-2xl bg-primary-bg/30 hover-scale">
-                        <div class="w-16 h-16 bg-primary-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
-                            </svg>
-                        </div>
-                        <h3 class="font-title text-xl font-semibold text-primary-text mb-2">Profissionalismo</h3>
-                        <p class="text-primary-text/70">Atendimento baseado em evidências científicas e ética profissional.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Seção CTA -->
-        <section class="py-20">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-12">
-                    <h2 class="font-title text-3xl md:text-4xl font-bold text-primary-text mb-6">
-                        Explore Mais Conteúdos
-                    </h2>
-                    <p class="text-lg text-primary-text/80 max-w-2xl mx-auto">
-                        Descubra recursos valiosos para o seu bem-estar mental e desenvolvimento pessoal.
-                    </p>
                 </div>
                 
-                <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
-                    <a href="./sobre.html" class="bg-primary-accent text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-primary-accent/90 transition-all duration-300 hover-scale">
-                        Conheça mais sobre mim
-                    </a>
-                    <a href="./podcast.html" class="bg-transparent border-2 border-primary-button text-primary-button px-8 py-4 rounded-full font-semibold text-lg hover:bg-primary-button hover:text-white transition-all duration-300 hover-scale">
-                        Ouça o podcast
-                    </a>
+                <div class="fade-in flex justify-center">
+                    <div class="relative">
+                        <div class="w-80 h-100 rounded-full overflow-hidden shadow-2xl">
+                            <img src="./assets/img/IMG_9323.JPG" alt="Foto de Mariana Virgínio, psicóloga clínica" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -top-4 -right-4 w-20 h-20 bg-primary-accent/30 rounded-full"></div>
+                        <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-primary-button/20 rounded-full"></div>
+                    </div>
                 </div>
-            </div>
-        </section>
-        
-    </main>
-    
-    <!-- Rodapé -->
-    <footer class="bg-primary-text text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="text-center">
-                <div class="flex items-center justify-center space-x-2 mb-4">                   
-                        <img src="./assets/img/logo/logo-Mari-05.png" alt="Logo Mariana Virgínio" class="h-24">
-                </div>
-                
-                <p class="text-white/80 mb-4">
-                    © 2024 Mariana Virgínio. Todos os direitos reservados.
-                </p>
-                
-                <p class="text-white/60 text-sm">
-                    Desenvolvido por <a href="https://taisgb.com.br" rel="noopener"  target="_blank" class="text-primary-accent hover:text-primary-accent/80 transition-colors duration-300">taisgb.com.br</a>
-                </p>
             </div>
         </div>
-    </footer>
-    
-    <!-- JavaScript -->
-    <script src="./main.js"></script>
-    
+    </section>
+
+    <section id="produtos" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="font-title text-3xl md:text-4xl font-bold text-center text-primary-text mb-16">
+                Adquira Nossos Produtos
+            </h2>
+            <p class="text-lg text-primary-text/80 max-w-2xl mx-auto text-center mb-12">
+                Descubra recursos e soluções para fortalecer a conexão do seu casal.
+            </p>
+                
+            <div class="grid gap-10 mx-4 md:grid-cols-3">
+                
+                <div class="bg-primary-bg/20 rounded-xl shadow-md overflow-hidden hover-scale">
+                    <img src="./assets/img/produtos/mapa-amor.png" alt="Capa do produto O Mapa do Nosso Amor" class="w-full h-42 object-cover" loading="lazy">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-primary-text">O Mapa do Nosso Amor</h3>
+                        <p class="text-sm text-primary-text/70 mb-4 text-justify">Um guia sensível e prático para revisitar a história da relação, identificar os comportamentos que aproximam (e os que afastam), e fortalecer o vínculo a partir do que realmente importa.</p>
+                        <p class="text-primary-text/70 text-sm mb-2"> > Ideal para quem quer entender a dinâmica do relacionamento com mais clareza e intenção.</p>
+                        <a href="https://mari-ilo.pages.net.br/mapa-amor" rel="noopener noreferrer" target="_blank" class="inline-block bg-[#02674b] text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-[#10ECAEFF] hover:scale-105 transition-all duration-300">
+                            Comprar agora
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-primary-bg/20 rounded-xl shadow-md overflow-hidden hover-scale">
+                    <img src="./assets/img/produtos/ToquesdeAmor.png" alt="Capa do produto 365 Toques de Amor" class="w-full h-42 object-cover" loading="lazy">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-primary-text">365 Toques de Amor</h3>
+                        <p class="text-sm text-primary-text/70 text-justify mb-4">Um diário visual inspirado nas 5 linguagens do amor. Vocês registram, dia após dia, pequenos gestos que expressam afeto — e ao final do mês, percebem os padrões, ausências e oportunidades de reconexão.</p>
+                        <p class="text-primary-text/70 text-sm mb-2"> > Para casais que querem cultivar o amor no cotidiano, com leveza e presença.</p>
+                        <a href="https://mari-ilo.pages.net.br/365toques-deamor" rel="noopener noreferrer" target="_blank" class="inline-block bg-[#02674b] text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-[#10ECAEFF] hover:scale-105 transition-all duration-300">
+                            Comprar agora
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-primary-bg/20 rounded-xl shadow-md overflow-hidden hover-scale">
+                    <img src="./assets/img/produtos/produto3.png" alt="Capa do produto Diagnóstico da Nossa Relação" class="w-full h-42 object-cover" loading="lazy">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-primary-text">Diagnóstico da Nossa Relação</h3>
+                        <p class="text-sm text-primary-text/70 mb-4 text-justify">Um material profundo, dividido em etapas, para ajudar vocês a refletirem com sinceridade sobre disposição, presença, compreensão, perdão e projetos em comum.</p>
+                        <p class="text-primary-text/70 text-sm mb-2"> > Perfeito para quem sente que está junto, mas distante — e quer entender por onde recomeçar.</p>
+                        <a href="https://mari-ilo.pages.net.br/produto-3" rel="noopener noreferrer" target="_blank" class="inline-block bg-[#02674b] text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-[#10ECAEFF] hover:scale-105 transition-all duration-300">
+                            Comprar agora
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="podcast" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-title text-4xl md:text-5xl font-bold text-primary-text mb-6">
+                    Nosso Podcast
+                </h2>
+                <p class="text-lg text-primary-text/80 max-w-2xl mx-auto mb-8">
+                    Vem ouvir a gente desatando nós dos relacionamentos?
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="flex justify-center">
+                    <div class="relative">
+                        <div class="items-center justify-center">
+                            <img src="./assets/img/podcast/podcas2.png" alt="Mariana Virgínio e Ilo, apresentadores do podcast" class="w-full h-full object-cover" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    
+                    <h4 class="font-title text-2xl font-bold text-primary-text mb-4">Ouça Nossos Episódios:</h4>
+                    <div class="w-full h-[full] md:h-[352px] bg-gray-200 rounded-lg overflow-hidden shadow-lg mb-8">                           
+                        <iframe class="spotify-embed-player" title="Player do Podcast Nós em Nós" src="https://open.spotify.com/embed/show/5mqyyZydkZNV7lE8CslRGB?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                     </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://open.spotify.com/show/5mqyyZydkZNV7lE8CslRGB?si=bc23988c4ef3468e" target="_blank" rel="noopener noreferrer" class="bg-primary-button text-white px-6 py-3 rounded-full font-semibold hover:bg-primary-button/90 transition-all duration-300 hover-scale text-center">
+                            Ouvir no Spotify
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gradient-to-r from-primary-bg to-primary-accent via-primary-button/20">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="font-title text-3xl md:text-4xl font-bold text-primary-text mb-6">
+                Pronta(o) para Transformar sua História?
+            </h2>
+            <p class="text-lg text-primary-text/80 max-w-2xl mx-auto mb-8">
+                Explore nossos produtos para casais ou agende sua consulta e comece a desatar os nós com a Mari.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#produtos" class="bg-primary-button text-white px-8 py-4 text-center justify-center rounded-full font-semibold text-lg hover:bg-primary-button/90 transition-all duration-300 hover-scale">
+                    Ver Produtos
+                </a>
+                <a href="#contato" class="bg-transparent border-2 border-primary-button text-center justify-center text-primary-button px-8 py-4 rounded-full font-semibold text-lg hover:bg-primary-button hover:text-white transition-all duration-300 hover-scale">
+                    Agendar Consulta
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+          <h2 class="font-title text-3xl md:text-4xl font-bold text-center text-primary-text mb-16">
+            Conecte-se com a Mari
+          </h2>
+      
+          <div class="grid md:grid-cols-2 gap-12">
+            <!-- COLUNA ESQUERDA - REDES SOCIAIS -->
+            <div>
+              <h3 class="font-title text-3xl font-bold text-primary-text mb-8">
+                Vamos Conversar?
+              </h3>
+      
+              <!-- TikTok -->
+              <div class="mb-12">
+                <h4 class="font-title text-2xl font-bold text-primary-text mb-4">Me siga no TikTok!</h4>
+                <p class="text-lg text-primary-text/80 mb-6">
+                  Encontre vídeos curtos com insights sobre psicologia, relacionamentos e muito mais!
+                </p>
+                <a href="https://www.tiktok.com/@psimarianavirginio" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-primary-accent text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-primary-accent/90 transition-all duration-300 hover-scale">
+                  <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M41,14.56c-3.71,0-6.71-3-6.71-6.71h0V6H27.35V31.3c0,2.91-2.36,5.27-5.27,5.27s-5.27-2.36-5.27-5.27,2.36-5.27,5.27-5.27a5.22,5.22,0,0,1,1.39.19V20.3a11.57,11.57,0,0,0-1.39-.09A11.3,11.3,0,1,0,32.82,31.3V21.58A13.66,13.66,0,0,0,41,23.5Z" fill="white"/>
+                  </svg>
+                  TikTok
+                </a>
+              </div>
+      
+              <!-- Instagram -->
+              <div class="mb-12">
+                <h4 class="font-title text-2xl font-bold text-primary-text mb-4">Me siga no Instagram!</h4>
+                <p class="text-lg text-primary-text/80 mb-6">
+                  Conteúdos sobre relacionamentos, saúde emocional e bastidores da rotina clínica.
+                </p>
+                <a href="https://www.instagram.com/psimarivirginio" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-primary-accent text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-primary-accent/90 transition-all duration-300 hover-scale">
+                  <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M7.75 2C4.57 2 2 4.57 2 7.75v8.5C2 19.43 4.57 22 7.75 22h8.5C19.43 22 22 19.43 22 16.25v-8.5C22 4.57 19.43 2 16.25 2h-8.5zM12 7.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm5.25-.75a1.25 1.25 0 1 1-1.25 1.25 1.25 1.25 0 0 1 1.25-1.25zM12 9a3 3 0 1 0 3 3 3 3 0 0 0-3-3z"/>
+                  </svg>
+                  Instagram
+                </a>
+              </div>
+            </div>
+      
+            <!-- COLUNA DIREITA - FORMULÁRIO -->
+            <div>
+              <h3 class="font-title text-3xl font-bold text-primary-text mb-8">
+                Entre em contato comigo!
+              </h3>
+              <form id="contact-form" class="space-y-6">
+                <div>
+                  <label for="nome" class="block text-primary-text font-medium mb-2">Nome Completo</label>
+                  <input type="text" id="nome" name="nome" class="w-full px-4 py-3 border border-primary-text/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-accent" placeholder="Seu nome completo" required>
+                </div>
+      
+                <div>
+                  <label for="email" class="block text-primary-text font-medium mb-2">E-mail</label>
+                  <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-primary-text/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-accent" placeholder="seu@email.com" required>
+                </div>
+      
+                <div>
+                  <label for="telefone" class="block text-primary-text font-medium mb-2">Telefone</label>
+                  <input type="tel" id="telefone" name="telefone" class="w-full px-4 py-3 border border-primary-text/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-accent" placeholder="(XX) XXXXX-XXXX" required>
+                </div>
+      
+                <div>
+                  <label for="mensagem" class="block text-primary-text font-medium mb-2">Sua Mensagem</label>
+                  <textarea id="mensagem" name="mensagem" rows="6" class="w-full px-4 py-3 border border-primary-text/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-accent resize-none" placeholder="Olá, Mari! Gostaria de conversar sobre..." required></textarea>
+                </div>
+      
+                <button type="submit" class="w-full bg-primary-button text-white py-4 rounded-lg font-semibold text-lg hover:bg-primary-button/90 transition-all duration-300 hover-scale">
+                  Enviar Mensagem
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+        
+</main>
+
+<footer class="bg-primary-text text-white py-12">
+    <div class="container mx-auto px-4">
+        <div class="text-center">
+            <div class="flex items-center justify-center space-x-2 mb-4">                   
+                    <img src="./assets/img/logo/logo-Mari-05.png" alt="Logo Mariana Virgínio" class="h-24" loading="lazy">
+            </div>
+            
+            <p class="text-white/80 mb-4">
+                © 2024 Mariana Virgínio. Todos os direitos reservados.
+            </p>
+            
+            <p class="text-white/60 text-sm">
+                Desenvolvido por <a href="https://taisgb.com.br" rel="noopener"  target="_blank" class="text-primary-accent hover:text-primary-accent/80 transition-colors duration-300">taisgb.com.br</a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="./main.js"></script>  
+
 </body>
 </html>
