@@ -1,68 +1,84 @@
-# Mariana Virgínio - Psicóloga Clínica
+# Mariana Virgínio - Landing Page Oficial
 
-Este é o website oficial de Mariana Virgínio, psicóloga clínica, dedicado a oferecer um espaço de conexão, acolhimento e ferramentas para o bem-estar emocional e o fortalecimento de relacionamentos. O site apresenta sua atuação profissional, produtos exclusivos para casais, um podcast sobre relacionamentos e diversas formas de contato.
+Este é o projeto da landing page oficial de Mariana Virgínio, psicóloga clínica, dedicada a oferecer um ponto de entrada único e focado na apresentação de seus produtos, facilitando a conversão e o contato direto com seu público.
 
 ## ✨ Visão Geral
 
-O site foi desenvolvido com o objetivo de ser uma plataforma intuitiva e acolhedora, refletindo a leveza e profissionalismo da Mariana. Ele serve como um hub para pacientes, casais e interessados em saúde mental e relacionamentos, oferecendo desde informações sobre a psicoterapia até recursos práticos e conteúdos digitais.
+A landing page foi desenvolvida para oferecer uma experiência fluida e direcionada, consolidando todas as informações essenciais em uma única página de rolagem. Ela reflete a leveza e o profissionalismo da Mariana, servindo como uma ferramenta estratégica para vendas e conexão.
 
 ## 🚀 Tecnologias Utilizadas
 
 * **HTML5:** Estrutura semântica do conteúdo.
 * **Tailwind CSS:** Framework CSS utilitário para estilização rápida e responsiva.
-* **JavaScript (Vanilla JS):** Para interatividade, animações e funcionalidades dinâmicas.
+* **JavaScript (Vanilla JS):** Para interatividade e funcionalidades dinâmicas.
 * **Google Fonts:** Tipografia personalizada (`Playfair Display` e `Josefin Sans`).
-* **SVGs:** Ícones escaláveis para elementos visuais.
+* **SVGs:** Ícones escaláveis para elementos visuais (WhatsApp, TikTok, etc.).
 * **Embeds:** Incorporação de conteúdos externos (Spotify para podcast, Instagram para feed).
 
-## 🎯 Funcionalidades Principais
+## 🎯 Funcionalidades da Landing Page
 
-### Início (`index.html`)
-* Apresentação da Mariana e sua abordagem.
-* Chamada para ação para os produtos e outras seções.
-* Destaque para os valores da profissional.
+### 1. Seção Hero
 
-### Sobre Mim (`pages/sobre.html`)
-* Detalhes sobre quem é Mariana (Mari), sua vida pessoal e como isso influencia sua prática.
-* Formação acadêmica e experiência profissional detalhadas.
-* Explicação da abordagem terapêutica (Análise do Comportamento e Terapias Contextuais como ACT e FAP).
+* Apresentação inicial da Mariana, com foco em sua paixão por cuidar e transformar relações.
+* Botões de chamada para ação: "Conheça meus produtos" e "Agendar Consulta".
 
-### Produtos (`pages/produtos.html`)
-* Seção dedicada aos produtos exclusivos para casais, criados para nutrir o amor e fortalecer a relação antes da exaustão.
-* Destaque para produtos como "O Mapa do Nosso Amor", "365 Toques de Amor", "Diagnóstico da Nossa Relação" e o "Curso: Nós em Nós".
+### 2. Botão Sticky do WhatsApp
 
-### Podcast (`pages/podcast.html`)
-* Página dedicada ao podcast (sem nome definido, mas focado em relacionamentos).
-* Frase convidativa: "Vem ouvir a gente desatando nós dos relacionamentos?".
-* Player de podcast incorporado do Spotify, exibindo uma lista de episódios para atualização automática.
+* Botão flutuante no canto inferior direito, que acompanha a rolagem da página.
+* Permite contato direto e rápido com a Mariana via WhatsApp.
 
-### Contato (`pages/contato.html`)
-* Formas de conexão direta com a Mariana.
-* **Destaque principal para as Redes Sociais:**
-    * Feed do Instagram incorporado (exibindo as últimas postagens).
+### 3. Seção de Produtos
+
+* Destaque para os produtos exclusivos para casais, criados para nutrir o amor.
+* Cards de produtos com design unificado (fundo levemente colorido para destaque, sombras e bordas sutis).
+* Links diretos para compra de cada produto.
+
+### 4. Seção Podcast
+
+* Apresentação do podcast com foco em desatar os nós dos relacionamentos.
+* Player do Spotify incorporado, exibindo a lista de episódios para atualização automática.
+* Botão para ouvir diretamente no Spotify.
+
+### 5. Seção CTA Pós-Podcast
+
+* Chamada para ação estratégica após o conteúdo do podcast, com botões para "Ver Produtos" e "Agendar Consulta", incentivando o próximo passo na jornada do usuário.
+
+### 6. Seção Contato
+
+* Múltiplas formas de conexão direta com a Mariana.
+* **Destaque para as Redes Sociais:**
     * Botão de fácil acesso para o perfil do TikTok.
+    * Feed do Instagram incorporado (via `<iframe>`), exibindo as últimas postagens do perfil.
 * Informações de contato essenciais (WhatsApp, E-mail, Consultório e Horários de Atendimento).
+* **Formulário de Contato:** Configurado para encaminhar as mensagens diretamente para o WhatsApp da Mariana, com mensagem pré-preenchida.
 
 ## ⚙️ Como Executar Localmente
 
-Para rodar o projeto em seu ambiente local, siga estas instruções:
+Para visualizar e testar a landing page em seu ambiente local, siga estas instruções:
 
 1.  **Clone o repositório:**
+
     ```bash
     git clone [https://github.com/taisgb/mariana-psicologa-site.git](https://github.com/taisgb/mariana-psicologa-site.git)
     cd mariana-psicologa-site
     ```
-2.  **Abra os arquivos no navegador:**
-    Simplesmente abra o arquivo `index.html` em seu navegador de preferência. Para uma melhor experiência de desenvolvimento, é recomendado usar uma extensão como "Live Server" no VS Code ou similar, que cria um servidor local.
 
+2.  **Abra os arquivos no navegador:**
+
+    Simplesmente abra o arquivo `index.html` em seu navegador de preferência. Para uma melhor experiência de desenvolvimento (especialmente para testar funcionalidades de formulário e scripts), é recomendado usar uma extensão como "Live Server" no VS Code ou similar, que cria um servidor local.
 
 ## 🎨 Customização
 
-Este projeto utiliza Tailwind CSS, o que facilita muito a customização:
+Este projeto utiliza Tailwind CSS para um desenvolvimento ágil e flexível:
 
-* **Cores, Fontes e Breakpoints:** Edite as configurações em `tailwind.config = { ... }` (dentro da tag `<script>` no `<head>` de cada arquivo HTML) para ajustar cores, fontes e outros aspectos do design.
-* **Classes Tailwind:** Modifique as classes Tailwind diretamente no HTML para ajustar o layout e a aparência dos elementos.
-* **CSS Personalizado:** Para estilos mais específicos ou que não podem ser alcançados com Tailwind, edite o arquivo `css/style.css`.
+* **Cores, Fontes e Breakpoints:** Edite as configurações em `tailwind.config = { ... }` (dentro da tag `<script>` no `<head>` do `index.html`) para ajustar a paleta de cores, tipografia e responsividade.
+* **Classes Tailwind:** Modifique as classes Tailwind diretamente no HTML para ajustar o layout e a aparência dos elementos conforme necessário.
+* **CSS Personalizado:** Para estilos muito específicos ou que precisam de maior controle, edite o arquivo `css/styles.css`.
 
-  ## 🤝 Créditos
-  * **Desenvolvimento:** taisgb.com.br
+## 🤝 Créditos
+
+**Desenvolvimento:** taisgb.com.br
+
+## 🙏 Agradecimentos
+
+Agradeço por explorar este projeto!
